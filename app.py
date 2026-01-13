@@ -23,9 +23,7 @@ model_choice = st.selectbox(
     ["Random Forest", "XGBoost", "Logistic Regression", "Decision Tree"]
 )
 
-if model_choice == "Random Forest":
-    model = joblib.load("model_rf.pkl")
-elif model_choice == "XGBoost":
+if model_choice == "XGBoost":
     model = joblib.load("model_xgb.pkl")
 elif model_choice == "Logistic Regression":
     model = joblib.load("model_logreg.pkl")
@@ -159,3 +157,4 @@ if st.button("🔍 Predict"):
         st.success("🔥 High Potential for Gold")
     else:
         st.error("⚠️ Low Potential for Gold")
+
